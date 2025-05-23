@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaurav Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" />
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('your-photo.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-[#fdfbfb] to-[#ebedee] text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="navbar bg-white shadow-md sticky top-0 z-50 fade-in">
+    <div class="navbar-start">
+      <a class="btn btn-ghost text-2xl font-bold text-indigo-600">Gaurav</a>
+    </div>
+    <div class="navbar-center gap-2 hidden lg:flex">
+      <a href="https://gauravpandey7823.github.io/ass1/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 1</a>
+      <a href="https://gauravpandey7823.github.io/ass2/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 2</a>
+      <a href="https://gauravpandey7823.github.io/ass3/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 3</a>
+      <a href="https://gauravpandey7823.github.io/Gaurav/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 4</a>
+      <a href="https://gauravpandey7823.github.io/aarti/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 5</a>
+        <a href="https://gauravpandey7823.github.io/code-shop/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 5</a>
+    </div>
+    <div class="navbar-end">
+      <a href="https://github.com/GauravPandey7823" target="_blank" class="btn btn-sm btn-info hover:scale-105">GitHub</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero h-[90vh] flex items-center justify-center text-white text-center fade-in">
+    <div class="bg-black bg-opacity-40 p-10 rounded-lg">
+      <h1 class="text-5xl font-bold mb-4 animate-pulse">Hi, I'm 😊Gaurav👋</h1>
+      <p class="text-xl">Creative Web Developer | UI Designer | Coder</p>
+    </div>
+  </section>
+
+<!-- About Me Section -->
+<section id="about" class="py-20 px-6 bg-base-100 text-center fade-in">
+  <h2 class="text-4xl font-semibold mb-6 text-indigo-700">About Me</h2>
+  
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 text-left items-center">
+    <!-- Image (optional, replace 'ecs-student.jpg' with your photo or illustration) -->
+    <img src="gauravimage.jpeg" alt="Engineering Student" class="rounded-lg shadow-lg w-full h-auto object-cover max-h-96" />
+
+    <!-- Info -->
+    <div>
+      <h3 class="text-2xl font-bold text-gray-800 mb-2">I'm a Computer Science Engineering Student</h3>
+      <p class="text-lg text-gray-600 mb-4">
+        Hello! I'm currently pursuing my B.Tech in Computer Science and Engineering (ECS). I have a deep interest in building responsive web applications, learning full-stack development, and exploring the world of AI and emerging technologies.
+      </p>
+
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li><strong>College:</strong> St.Jhon College Engineering and Management</li>
+        <li><strong>Year:</strong> 3rd Year (2022–2026 Batch)</li>
+        <li><strong>Skills:</strong> HTML, CSS, JavaScript, React, Tailwind CSS, Python</li>
+        <li><strong>Interests:</strong> UI/UX Design, Web Development, Machine Learning</li>
+        <li><strong>Projects:</strong> Portfolio Website, E-commerce Cart System</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-10">
+    <p class="text-gray-500 max-w-2xl mx-auto text-lg">
+      My journey in tech is driven by curiosity and creativity. I believe in learning by doing, and I'm always open to new challenges and collaborations!
+    </p>
+  </div>
+</section>
+
+
+<!-- Contact Form -->
+<section id="contact" class="py-20 px-6 bg-base-100 fade-in">
+  <h2 class="text-4xl font-semibold text-center mb-8 text-indigo-700">Contact Me</h2>
+  <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+    <form id="contact-form" class="space-y-6">
+      <!-- Name -->
+      <div>
+        <label for="name" class="block text-sm font-semibold text-gray-700 mb-1">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" class="input input-bordered w-full" required />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="john@example.com" class="input input-bordered w-full" required />
+      </div>
+
+      <!-- Phone Number -->
+      <div>
+        <label for="phone" class="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+91-9876543210" class="input input-bordered w-full" />
+      </div>
+
+      <!-- Subject -->
+      <div>
+        <label for="subject" class="block text-sm font-semibold text-gray-700 mb-1">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Reason for contacting" class="input input-bordered w-full" required />
+      </div>
+
+      <!-- Preferred Contact Method -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Preferred Contact Method</label>
+        <div class="flex space-x-4">
+          <label class="flex items-center gap-2">
+            <input type="radio" name="contact-method" value="Email" class="radio radio-primary" checked />
+            Email
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="radio" name="contact-method" value="Phone" class="radio radio-primary" />
+            Phone
+          </label>
+        </div>
+      </div>
+
+      <!-- Message -->
+      <div>
+        <label for="message" class="block text-sm font-semibold text-gray-700 mb-1">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Type your message here..." class="textarea textarea-bordered w-full" required></textarea>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn btn-primary w-full hover:scale-105 transition-transform">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-base-200 py-6 text-center text-sm text-gray-500 fade-in">
+    © 2025 Your Name. All rights reserved.
+  </footer>
+
+  <!-- JS for form -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Message sent successfully!');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
+
