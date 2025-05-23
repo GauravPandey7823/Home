@@ -30,22 +30,112 @@
 <body class="bg-gradient-to-br from-[#fdfbfb] to-[#ebedee] text-gray-800 font-sans">
 
   <!-- Navbar -->
-  <nav class="navbar bg-white shadow-md sticky top-0 z-50 fade-in">
-    <div class="navbar-start">
-      <a class="btn btn-ghost text-2xl font-bold text-indigo-600">Gaurav</a>
-    </div>
-    <div class="navbar-center gap-2 hidden lg:flex">
-      <a href="https://gauravpandey7823.github.io/ass1/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 1</a>
-      <a href="https://gauravpandey7823.github.io/ass2/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 2</a>
-      <a href="https://gauravpandey7823.github.io/ass3/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 3</a>
-      <a href="https://gauravpandey7823.github.io/Gaurav/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 4</a>
-      <a href="https://gauravpandey7823.github.io/aarti/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 5</a>
-        <a href="https://gauravpandey7823.github.io/code-shop/" class="btn btn-sm btn-outline btn-accent hover:scale-105">Day 5</a>
-    </div>
-    <div class="navbar-end">
-      <a href="https://github.com/GauravPandey7823" target="_blank" class="btn btn-sm btn-info hover:scale-105">GitHub</a>
-    </div>
-  </nav>
+<nav class="navbar bg-white shadow-md sticky top-0 z-50 fade-in">
+  <div class="navbar-start">
+    <a class="btn btn-ghost text-2xl font-bold text-indigo-600">Gaurav</a>
+    <button id="hamburgerBtn" class="md:hidden text-3xl focus:outline-none hover:text-indigo-600 transition duration-300">
+      ☰
+    </button>
+  </div>
+  <div class="navbar-center gap-2 hidden lg:flex">
+    <a href="https://gauravpandey7823.github.io/ass1/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 1</a>
+    <a href="https://gauravpandey7823.github.io/ass2/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 2</a>
+    <a href="https://gauravpandey7823.github.io/ass3/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 3</a>
+    <a href="https://gauravpandey7823.github.io/Gaurav/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 4</a>
+    <a href="https://gauravpandey7823.github.io/aarti/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 5</a>
+    <a href="https://gauravpandey7823.github.io/code-shop/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 6</a>
+  </div>
+  <div class="navbar-end">
+    <a href="https://github.com/GauravPandey7823" target="_blank" class="btn btn-sm btn-info hover:scale-105 transition duration-300">GitHub</a>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="md:hidden hidden flex-col bg-white shadow-md absolute top-16 left-0 w-full z-40 rounded-lg transition duration-300">
+  <a href="https://gauravpandey7823.github.io/ass1/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 1</a>
+  <a href="https://gauravpandey7823.github.io/ass2/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 2</a>
+  <a href="https://gauravpandey7823.github.io/ass3/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 3</a>
+  <a href="https://gauravpandey7823.github.io/Gaurav/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 4</a>
+  <a href="https://gauravpandey7823.github.io/aarti/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 5</a>
+  <a href="https://gauravpandey7823.github.io/code-shop/" class="btn btn-sm btn-outline btn-accent hover:scale-105 transition duration-300">Day 6</a>
+</div>
+
+<style>
+  .navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar:hover {
+    background-color: #f8f9fa; /* Light gray on hover */
+  }
+
+  .btn {
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn-outline {
+    border: 2px solid #4f46e5; /* Indigo color */
+    color: #4f46e5; /* Indigo color */
+  }
+
+  .btn-outline:hover {
+    background-color: #4f46e5; /* Indigo background on hover */
+    color: white; /* White text on hover */
+  }
+
+  .btn-info {
+    background-color: #3b82f6; /* Blue color */
+    color: white;
+  }
+
+  .btn-info:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+  }
+
+  #mobileMenu {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #mobileMenu a {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb; /* Light gray divider */
+  }
+
+  #mobileMenu a:last-child {
+    border-bottom: none; /* Remove border from last item */
+  }
+
+  #mobileMenu a:hover {
+    background-color: #f3f4f6; /* Light gray on hover */
+  }
+</style>
+<!--
+<script>
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  hamburgerBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
+
+<script>
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  hamburgerBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+-->
 
   <!-- Hero Section -->
   <section class="hero h-[90vh] flex items-center justify-center text-white text-center fade-in">
